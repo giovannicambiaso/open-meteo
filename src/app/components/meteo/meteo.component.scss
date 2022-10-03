@@ -1,0 +1,30 @@
+.content {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+mat-form-field {
+    margin-bottom: 0.5em;
+}
+
+mat-card {
+    width: 20em;
+
+    margin-top: 0.5em;
+}
+
+mat-card-title {
+    margin-bottom: 0.5em;
+}
+
+mat-card-subtitle {
+    margin-bottom: 0.5em;
+}
+
+.longitude {
+    margin-left: 1em;
+}

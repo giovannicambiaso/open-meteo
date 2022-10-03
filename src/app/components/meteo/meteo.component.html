@@ -1,0 +1,23 @@
+<div class="content">
+    <mat-form-field appearance="outline">
+        <mat-label>City Name</mat-label>
+        <input matInput placeholder="Insert your City" [(ngModel)]="cityName">
+        <button mat-icon-button matSuffix (click)="getGeocodingDatas()">
+            <mat-icon>language</mat-icon>
+        </button>
+        <mat-hint>Rome, Berlin, etc.</mat-hint>
+    </mat-form-field>
+    <mat-card *ngFor="let result of results">
+        <mat-card-title>{{result.name}}</mat-card-title>
+        <mat-card-subtitle>{{result.country}}, {{result.country_code}}</mat-card-subtitle>
+        <mat-card-subtitle>{{result.admin1}}</mat-card-subtitle>
+        <mat-card-subtitle>{{result.timezone}}</mat-card-subtitle>
+        <mat-card-content>
+            <span>Latitude: {{result.latitude | number : '1.2-2'}}</span>
+            <span class="longitude">Longitude: {{result.longitude | number : '1.2-2'}}</span>
+        </mat-card-content>
+    </mat-card>
+    
+    
+</div>
+    
