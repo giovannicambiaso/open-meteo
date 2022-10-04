@@ -19,7 +19,7 @@ export class MeteoComponent implements OnInit {
   constructor(
     private geocodingService: GeocodingService, 
     private forecastService: ForecastService) { 
-      this.cityName = 'Rome';
+      this.cityName = 'Genoa';
       this.results = [];
       this.daily = {
         time: [],
@@ -45,7 +45,7 @@ export class MeteoComponent implements OnInit {
         this.forecastService.getForecastDailyDatas(
           root.results[0].latitude, 
           root.results[0].longitude).subscribe({
-            next: root => console.log(root.daily),
+            next: root => this.daily = root.daily,
             error: error => console.error(error)
         }),
       error: error => console.error(error)

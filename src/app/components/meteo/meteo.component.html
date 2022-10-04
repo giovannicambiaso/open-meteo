@@ -15,6 +15,10 @@
         <mat-card-content>
             <span>Latitude: {{result.latitude | number : '1.2-2'}}</span>
             <span class="longitude">Longitude: {{result.longitude | number : '1.2-2'}}</span>
+            <p>
+                <span class="">Today: </span>
+                <mat-icon *ngIf="daily.weathercode[0] === 3" fontIcon="cloudy"></mat-icon>
+            </p>
         </mat-card-content>
     </mat-card>
     
